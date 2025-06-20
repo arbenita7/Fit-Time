@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(20, 100%, 59%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(207, 100%, 29%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(154, 100%, 39%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --chart-1: hsl(20, 100%, 59%);
+  --chart-2: hsl(207, 100%, 29%);
+  --chart-3: hsl(154, 100%, 39%);
+  --chart-4: hsl(280, 100%, 70%);
+  --chart-5: hsl(340, 100%, 70%);
+  --neutral-light: hsl(210, 17%, 98%);
+  --neutral-medium: hsl(210, 11%, 45%);
+  --neutral-dark: hsl(210, 11%, 15%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(20, 100%, 59%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(207, 100%, 29%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(154, 100%, 39%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  --neutral-light: hsl(240, 3.7%, 15.9%);
+  --neutral-medium: hsl(240, 5%, 64.9%);
+  --neutral-dark: hsl(0, 0%, 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-neutral-light {
+    color: hsl(var(--neutral-light));
+  }
+  
+  .text-neutral-medium {
+    color: hsl(var(--neutral-medium));
+  }
+  
+  .text-neutral-dark {
+    color: hsl(var(--neutral-dark));
+  }
+  
+  .bg-neutral-light {
+    background-color: hsl(var(--neutral-light));
+  }
+  
+  .bg-neutral-medium {
+    background-color: hsl(var(--neutral-medium));
+  }
+  
+  .bg-neutral-dark {
+    background-color: hsl(var(--neutral-dark));
+  }
+  
+  .border-neutral-light {
+    border-color: hsl(var(--neutral-light));
+  }
+  
+  .border-neutral-medium {
+    border-color: hsl(var(--neutral-medium));
+  }
+  
+  .border-neutral-dark {
+    border-color: hsl(var(--neutral-dark));
+  }
+}
