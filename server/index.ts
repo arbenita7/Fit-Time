@@ -62,10 +62,9 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
  const port = 8080;
   server.listen(
-    port,"127.0.0.1", () => {
+    port,"localhost", () => {
     console.log(`serving on port ${port}`);
   });
 })();
  
-  });
-})();
+
