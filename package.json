@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": " vite build",
-    "start": "vite preview ",
+    "start": "npm run build && npm run server",
     "check": "tsc",
     "db:push": "drizzle-kit push",
     "server":"ts-node server/index.ts"
