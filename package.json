@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
+    "dev": "ts-node server/index.ts",
     "build": " tsc",
     "start": "node dist/server/index.js",
     "check": "tsc",
