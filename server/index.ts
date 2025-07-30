@@ -1,7 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
-import http from "http";
+import { fileURLTOPATH } from "url";
 
 const app = express();
 app.use(express.json());
@@ -17,6 +16,10 @@ app.use((req, res, next) => {
     capturedJsonResponse = bodyJson;
     return originalResJson.apply(res, [bodyJson, ...args]);
   };
+  const _filename = fileURLTOPATH(import.meta.url);
+  const _dirname =
+    path.dirname(_filename);
+  
 
   res.on("finish", () => {
     const duration = Date.now() - start;
